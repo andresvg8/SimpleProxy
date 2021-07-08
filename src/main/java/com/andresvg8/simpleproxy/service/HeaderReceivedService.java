@@ -39,8 +39,8 @@ public class HeaderReceivedService {
 	}
 
 	@Transactional
-	public HeaderReceived save(HeaderReceived requestHeaderReceived) {
-		return repo.save(requestHeaderReceived);
+	public HeaderReceived save(HeaderReceived headerReceived) {
+		return repo.save(headerReceived);
 	}
 
 	@Transactional

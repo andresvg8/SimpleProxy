@@ -40,8 +40,8 @@ public class HeaderKeyReceivedService {
 	}
 
 	@Transactional
-	public HeaderKeyReceived save(HeaderKeyReceived requestHeaderReceived) {
-		return repo.save(requestHeaderReceived);
+	public HeaderKeyReceived save(HeaderKeyReceived headerKeyReceived) {
+		return repo.save(headerKeyReceived);
 	}
 
 	@Transactional

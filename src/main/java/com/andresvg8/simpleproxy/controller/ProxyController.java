@@ -41,8 +41,11 @@ public class ProxyController {
 			HeaderKeyReceived headerKey = new HeaderKeyReceived();
 			headerKey.setKey(key);
 			headerKey.setValue(value);
-			headerKeyService.save(headerKey);
+			headerKey.setHeaderReceived(header);
+			header.getHeaderKeys().add(headerKey);
+			//headerKeyService.save(headerKey);
 	    });
+		headerService.save(header);
 		return ResponseEntity.status(HttpStatus.OK).build();
 	}
 }
