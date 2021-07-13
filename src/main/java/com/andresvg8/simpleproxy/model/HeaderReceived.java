@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +29,7 @@ public class HeaderReceived {
 	private LocalDateTime dateTime;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="headerReceived")
+	@OneToMany(mappedBy="headerReceived", cascade=CascadeType.ALL)
 	private List<HeaderKeyReceived> headerKeys=new ArrayList<>();
 
 	public Long getId() {
